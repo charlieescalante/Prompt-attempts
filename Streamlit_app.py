@@ -9,9 +9,8 @@ from prompts import (
 )
 import openai
 
-# Set your OpenAI API Key
-OPENAI_API_KEY = "your-openai-api-key"
-openai.api_key = OPENAI_API_KEY
+# Set OpenAI API key from Streamlit secrets
+openai.api_key = st.secrets["OPENAI_API_Key"]
 
 # Function to query the LLM
 def query_llm(prompt):
